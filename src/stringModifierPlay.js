@@ -27,35 +27,6 @@ const StringModifierPlay = () => {
 
     setModifiedString(newModifiedString);
   }, [replacementCharacters, replacementCharacters2]);
-  // Effect to update modifiedString when replacementCharacters changes
-  //   useEffect(() => {
-  //     const computeModifiedStringY = () => {
-  //       if (!replacementCharacters) {
-  //         return originalString;
-  //       }
-  //       return originalString.replace(
-  //         new RegExp(`${replacementCharacters}`, "g"),
-  //         "Y"
-  //       );
-  //     };
-  //     const computeModifiedStringX = () => {
-  //       console.log(
-  //         "replace replacementCharacters2 with",
-  //         replacementCharacters2
-  //       );
-  //       if (!replacementCharacters2 & !modifiedString) {
-  //         return originalString;
-  //       } else if (!replacementCharacters2 & modifiedString) {
-  //         return modifiedString;
-  //       }
-  //       return modifiedString.replace(
-  //         new RegExp(`${replacementCharacters2}`, "g"),
-  //         "X"
-  //       );
-  // //     };
-  //     setModifiedString(computeModifiedStringY());
-  //     // setModifiedString(computeModifiedStringX());
-  //   }, [replacementCharacters, replacementCharacters2]);
 
   const handleInputChange = (event) => {
     const { value } = event.target;
@@ -78,7 +49,7 @@ const StringModifierPlay = () => {
             type="text"
             value={replacementCharacters}
             onChange={handleInputChange}
-            className="w-20 p-1 border rounded"
+            className="w-28 p-1 border rounded"
           />
         </div>
         <div className="flex items-center">
@@ -89,7 +60,7 @@ const StringModifierPlay = () => {
             value={replacementCharacters2}
             onChange={handleInputChange2}
             placeholder="case sensitive"
-            className="w-20 p-1 border rounded"
+            className="w-28 p-1 border rounded"
           />
         </div>
       </div>

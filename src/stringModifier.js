@@ -60,7 +60,7 @@ const StringModifier = () => {
                   placeholder="aa"
                   value={replacementCharacters}
                   onChange={handleInputChange}
-                  className="w-20 p-1 border rounded"
+                  className="w-28 p-1 border rounded"
                 />
               </div>
             </p>
