@@ -21,11 +21,12 @@ export default function Codeblock() {
     lineHeight: "1.5", // Increase line height for readability
     tabSize: "4", // Set the tab size to 4 spaces for better code formatting
     outline: "none", // Removes the outline to make it more embedded
+    marginRight: "10px",
   };
 
   return (
     <>
-      {isLoading ? <p>Loading...</p> : <p>Ready!</p>}
+      {/* {isLoading ? <p>Loading...</p> : <p>Ready!</p>} */}
       <div className="flex flex-row">
         <div>
           <form>
@@ -48,15 +49,17 @@ export default function Codeblock() {
                               : "bg-gray-500 cursor-not-allowed"
                           }`}
             >
-              {!isRunning ? "Run" : "Running..."}
+              {isLoading ? "Loading..." : !isRunning ? "Run" : "Running..."}
             </button>
           </form>
         </div>
         <div>
           <p>Output</p>
-          <pre>
-            <code>{stdout}</code>
-          </pre>
+          <div className="flex flex-wrap max-w-[300px] max-h-[200px] overflow-y-auto">
+            <pre className="whitespace-pre-wrap break-words">
+              <code>{stdout}</code>
+            </pre>
+          </div>
           <pre>
             <code>{stderr}</code>
           </pre>
