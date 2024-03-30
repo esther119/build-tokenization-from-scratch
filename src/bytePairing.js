@@ -8,14 +8,14 @@ const BytePairingAlgorithm = () => {
       <h1 className="text-5xl font-bold mb-8">Byte Pairing Algorithm</h1>
       <div className="max-w-xl mx-auto">
         <p className="text-lg mb-4 text-justify">
-          In large language models, we have a limited context length. So how can
-          we fit as many words as possible? Let's say we have a string:{" "}
+          If we have a limited context length how can we fit as many words as
+          possible? Let's say we have a string:{" "}
           <code className="inline-block rounded-lg bg-gray-200 px-2 py-1">
             aabdaaabac
           </code>
-          . How can we make it shorter? We can use byte pairing algorithm. The
-          main idea of this algorithm is to find the most frequent pair in the
-          text, and replcae the pair with a new text.
+          . Can we make it shorter? The main idea of byte pairing algorithm is
+          to find the most frequent pair in the text, and replcae the pair with
+          a new text.
         </p>
         <p className="text-lg">
           For instance, what if{" "}
