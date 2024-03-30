@@ -5,7 +5,9 @@ import StringModifierPlay from "./stringModifierPlay"; // Adjust the path as nec
 const BytePairingAlgorithm = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold mb-8">Byte Pairing Algorithm</h1>
+      <h1 className="text-5xl font-bold mb-8 text-center text-gray-900 mt-8">
+        Byte Pairing Algorithm
+      </h1>
       <div className="max-w-xl mx-auto">
         <p className="text-lg mb-4 text-justify">
           If we have a limited context length how can we fit as many words as

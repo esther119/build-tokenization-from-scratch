@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.highlight-space-before::before {
+  content: "\00a0"; /* Non-breaking space */
+  display: inline-block;
+  width: 0.8em; /* Adjust the width as needed */
+  height: 70%; /* Match the height of the container */
+  background-color: #ffeeba; /* Set the background color */
+  position: absolute;
+  top: 50%; /* Move the element to the vertical center */
+  transform: translateY(-50%); /* Center the element vertically */
+  left: 5%;
+}
