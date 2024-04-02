@@ -1,6 +1,6 @@
 // import VimeoVideo from "../videoDisplay";
 import CodeRunner from "../codeRunner";
-import initialCode from "../data";
+import { nonEnglish, unicodeConversion } from "../data";
 
 const ASCII = () => {
   return (
@@ -33,7 +33,6 @@ const ASCII = () => {
           <li>a = 97</li>
           <li>t = 116</li>
         </ul>
-
         <p className="text-lg mt-4 mb-4 text-justify">
           So, "Cat" in bytes (in ASCII encoding) can be seen as a sequence: [67,
           97, 116].
@@ -76,8 +75,25 @@ const ASCII = () => {
           attention to English vs non English output and compare the difference
           between ASCII vs Unicode, it’s so interesting!
         </p>
+        <p className="text-lg mt-4 mb-4 text-justify">
+          Play(a): How is non-English character encoded in Unicode look like?
+          <br></br>
+          Play(b): How does it look like in byte values? Hint: Make it a{" "}
+          <code className="inline-block rounded-lg bg-gray-200 px-2 py-1">
+            list
+          </code>
+        </p>
         <div className="flex flex-col items-center justify-center">
-          <CodeRunner initialCode={initialCode} />{" "}
+          <CodeRunner initialCode={nonEnglish} />{" "}
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <p className="text-lg mt-4 mb-4 text-justify">
+            Play(c): How does Unicode and ASCII difference in byte conversion
+            and decoding?
+          </p>
+          <div className="flex flex-col items-center justify-center">
+            <CodeRunner initialCode={unicodeConversion} />{" "}
+          </div>
         </div>
       </div>
     </div>
