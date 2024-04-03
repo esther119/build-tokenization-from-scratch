@@ -17,8 +17,8 @@ const TokenizationIntro = () => {
             className="text-blue-500 hover:underline"
           >
             Tiktokenizer
-          </a>
-          , you'll see how{" "}
+          </a>{" "}
+          (My friends ask me if it is Tiktok, it's not haha.) , you'll see how{" "}
           <code
             className="inline-block rounded-lg bg-gray-200 px-2 py-1"
             style={{ position: "relative" }}

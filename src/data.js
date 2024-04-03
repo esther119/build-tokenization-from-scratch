@@ -3,6 +3,8 @@ text = 'HA 我是可憐的失業仔 👋 (nice meeting you!)'
 for char in text:
   unicode_encoded =  str(char.encode('utf-8'))
   print(f" {char} \u2192 {unicode_encoded}")
+
+unicode_encoded_list = text.encode('utf-8')
 `;
 
 const unicodeConversion = `# Unicode Conversion (UTF-8 encoding)
