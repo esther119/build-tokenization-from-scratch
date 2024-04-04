@@ -4,7 +4,9 @@ for char in text:
   unicode_encoded =  str(char.encode('utf-8'))
   print(f" {char} \u2192 {unicode_encoded}")
 
+#Play(b)
 unicode_encoded_list = text.encode('utf-8')
+#TODO: convert to byte sequences
 `;
 
 const unicodeConversion = `# Unicode Conversion (UTF-8 encoding)

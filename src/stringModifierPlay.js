@@ -49,6 +49,7 @@ const StringModifierPlay = () => {
             type="text"
             value={replacementCharacters}
             onChange={handleInputChange}
+            placeholder="case sensitive"
             className="w-28 p-1 border rounded"
           />
         </div>

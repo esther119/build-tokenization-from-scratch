@@ -84,10 +84,15 @@ const TokenizationIntro = () => {
             disappointing. We will use Byte Pairing Algorithm later to explain
             this idea in detailed example.
           </p>
-          <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify"></p>
-          Now, try inputting the same data into both GPT2 and GPT4. Which one
-          has longer tokens? Is OpenAI able to effectively reduce the token
-          lengths for the same information?
+          <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
+            Try inputting the same data into both GPT2 and GPT4. Which one has
+            longer tokens? Is OpenAI able to effectively reduce the token
+            lengths for the same information?
+          </p>
+          <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
+            If you get the basics here, we can start learning how to translate
+            texts to byte sequences using ASCII and Unicode.
+          </p>
         </p>
       </div>
     </div>

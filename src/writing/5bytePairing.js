@@ -24,7 +24,7 @@ const BytePairingAlgorithm = () => {
           <code className="inline-block rounded-lg bg-gray-200 px-2 py-1">
             Z=aa
           </code>
-          ?
+          ?<br></br>(Only insert two character here, because this is bigram!)
         </p>
       </div>
       <StringModifier />

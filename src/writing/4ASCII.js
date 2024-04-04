@@ -96,7 +96,8 @@ const ASCII = () => {
         <p className="text-lg mt-4 mb-4 text-justify">
           For instance, Unicode U+00
           <span className="bg-yellow-500 rounded-lg">4</span>
-          <span className="bg-green-500 rounded-lg">1</span> = A. Here's why:
+          <span className="bg-green-500 rounded-lg">1</span> = A. Why? Fill in
+          the base for Unicode and you will see!
           <br></br>
           <Calculation></Calculation>
           <div className="flex justify-center items-center mt-8 sebmb-4">
