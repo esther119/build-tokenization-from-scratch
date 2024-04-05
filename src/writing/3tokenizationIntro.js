@@ -1,12 +1,10 @@
-// import VimeoVideo from "../videoDisplay";
-
 const TokenizationIntro = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold mb-8 text-center text-gray-900 mt-8">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-gray-900 mt-8">
         What is tokenization?
       </h1>
-      <p className="text-lg mb-4 text-justify">
+      <p>
         Tokenization is the process of converting raw text into a sequence of
         tokens. Simply put, it involves converting characters and words into
         integers which can then be used to train our Language Model. <br />
@@ -50,13 +48,6 @@ const TokenizationIntro = () => {
         more tokens to express the same meaning as in English. This could be one
         reason why non-English languages usually perform worse.
       </p>
-      {/* <div className="flex justify-center items-center mt-4 mb-4">
-        <img
-          src="/2.png"
-          alt="tokenizer1"
-          style={{ maxWidth: "none", width: "900px" }}
-        />
-      </div> */}
 
       <p className="text-lg mt-4 mb-4 text-justify">
         <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">

@@ -1,13 +1,17 @@
 // src/PythonEditor.js
-import React from "react";
+import React, { useEffect } from "react";
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-monokai";
 
 function PythonEditor({ code, setCode }) {
+  useEffect(() => {
+    // Dispatch resize event after component mounts
+    window.dispatchEvent(new Event("resize"));
+  }, []);
   return (
-    <div className="max-w-md ">
+    <div className="w-full overflow-x-scroll">
       <AceEditor
         mode="python"
         theme="monokai"

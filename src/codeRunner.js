@@ -26,7 +26,7 @@ function CodeRunner({ initialCode }) {
   return (
     <div>
       <div className="container flex flex-col lg:flex-row item-start">
-        <div className="editor-container lg:order-1 lg:flex-2 mr-8">
+        <div className="editor-container max-w-72 lg:max-w-none">
           <PythonEditor code={code} setCode={setCode} />
         </div>
         <div className="output-container lg:order-2 lg:min-w-[500px] lg:max-w-[500px] lg:max-h-[500px] lg:overflow-y-auto px-2">

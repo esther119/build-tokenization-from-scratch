@@ -5,7 +5,7 @@ import StringModifierPlay from "../stringModifierPlay"; // Adjust the path as ne
 const BytePairingAlgorithm = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold mb-8 text-center text-gray-900 mt-8">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-gray-900 mt-8">
         Byte Pairing Algorithm
       </h1>
       <div className="max-w-xl mx-auto">
