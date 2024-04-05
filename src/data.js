@@ -14,7 +14,7 @@ const unicodeConversion = `# Unicode Conversion (UTF-8 encoding)
 
 # Decode the Unicode (UTF-8) back to string
 unicode_decoded = unicode_encoded.decode('utf-8')
-print("Decoded Unicode String:", unicode_decoded)
+print("Decoded Unicode:", unicode_decoded)
 
 # ASCII Conversion
 # ASCII is valid from 0 - 255
@@ -23,7 +23,7 @@ print("ASCII Values:", ascii_values)
 
 # To demonstrate the conversion back from ASCII values to characters
 ascii_chars = [chr(value) for value in ascii_values]
-print("ASCII Characters:", ''.join(ascii_chars))
+print("Decoded ASCII:", ''.join(ascii_chars))
 `;
 
 export { nonEnglish, unicodeConversion };

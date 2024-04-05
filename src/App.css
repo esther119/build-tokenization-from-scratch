@@ -1,3 +1,6 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 .App {
   text-align: center;
 }
@@ -47,4 +50,12 @@
   top: 50%; /* Move the element to the vertical center */
   transform: translateY(-50%); /* Center the element vertically */
   left: 5%;
+}
+
+.absolute-width-96 {
+  width: 900px;
+}
+
+p {
+  @apply text-lg mb-4 text-justify max-w-xl mx-auto;
 }

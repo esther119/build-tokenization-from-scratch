@@ -22,6 +22,7 @@ const TokenHowTo = () => {
           a specified character.
         </blockquote>
         <div className="flex flex-col items-center justify-center">
+          {" "}
           <CodeRunner
             className="max-h-[200px]"
             initialCode={`print([ord(x)for x in "hello 我是可憐的失業仔 👋"])`}

@@ -1,8 +1,8 @@
-const ASCII = () => {
+const Intro = () => {
   return (
     <div>
       <h1 className="text-5xl font-bold mb-8 text-center text-gray-900 mt-8">
-        Build Tokenizer From Scratch
+        Build Tokenizer From Scratch - Part 1
       </h1>
       <div className="max-w-xl mx-auto">
         <p className="text-lg mb-4 text-justify">
@@ -19,4 +19,4 @@ const ASCII = () => {
   );
 };
 
-export default ASCII;
+export default Intro;

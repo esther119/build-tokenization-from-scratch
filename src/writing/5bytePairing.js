@@ -66,7 +66,7 @@ const BytePairingAlgorithm = () => {
           fewer frequent pairs to replace, and therefore are left with more
           individual tokens.
         </p>
-        <p className="text-lg mt-2 mb-12 text-justify">
+        <p className="text-lg mt-2 mb-2 text-justify">
           Damn, when I show this section to my business friend, even she can
           understand!{" "}
         </p>
