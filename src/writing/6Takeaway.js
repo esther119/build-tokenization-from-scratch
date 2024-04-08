@@ -5,7 +5,7 @@ const TakeAway = () => {
         Take Away
       </h1>
       <div className="max-w-xl mx-auto">
-        <p className="text-lg mb-4 text-justify">
+        <p>
           This is Part 1 of our series on learning how to build a tokenizer from
           scratch. Today, we learn:<br></br>
           <ol className="mt-4 mb-4 list-decimal">
@@ -34,9 +34,7 @@ const TakeAway = () => {
           generation and comprehension. This addresses our problem of limited
           context length.
         </p>
-        <p className="text-lg mb-12 text-justify">
-          So tired writing Part 1. I don’t know if I will write Part 2…
-        </p>
+        <p>So tired writing Part 1. I don’t know if I will write Part 2…</p>
       </div>
     </div>
   );

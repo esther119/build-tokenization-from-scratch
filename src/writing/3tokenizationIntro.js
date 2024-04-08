@@ -38,7 +38,7 @@ const TokenizationIntro = () => {
         <img src="/2.png" alt="tokenizer2" class="absolute-width-96 h-auto" />
       </div>
 
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p>
         What happens if you input code into the tokenizer? Does a single space
         indentation represent one token or does it represent multiple spaces as
         a single token? How does the tokenization of space differ in GPT-2
@@ -49,37 +49,33 @@ const TokenizationIntro = () => {
         reason why non-English languages usually perform worse.
       </p>
 
-      <p className="text-lg mt-4 mb-4 text-justify">
-        <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
-          You ask me why?
-        </p>
-        <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
-          Think of an LLM having a limited context length like a person's
-          working memory. If the working memory is big, the LLM can absorb and
-          recall a ton of information. But if the context limit is petite, the
-          LLM turns into my alzheimer grandpa who can't remember anything.{" "}
-        </p>
-        <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
-          If we can't alter the context length limit, our next best option is to
-          use tokenization to cram in as much useful information as we can. For
-          instance, if we have a super long sequence that stores little
-          information, like this Japanese and Mandarin example, of course, the
-          LLM will remember little, and the performance is just as
-          disappointing. We will use Byte Pairing Algorithm later to explain
-          this idea in detailed example.
-        </p>
-        <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
-          Try inputting the same data into both GPT2 and GPT4. Which one has
-          longer tokens? Is OpenAI able to effectively reduce the token lengths
-          for the same information?
-        </p>
-        <p className="flex justify-center item-center text-lg mt-4 mb-2 text-justify">
-          If you get the basics here, we can start learning how to translate
-          texts to byte sequences using ASCII and Unicode.
-        </p>
+      {/* <p className="text-lg mt-4 mb-4 text-justify"> */}
+      <p className="flex justify-center item-center">You ask me why?</p>
+      <p className="flex justify-center item-center ">
+        Think of an LLM having a limited context length like a person's working
+        memory. If the working memory is big, the LLM can absorb and recall a
+        ton of information. But if the context limit is petite, the LLM turns
+        into my alzheimer grandpa who can't remember anything.{" "}
+      </p>
+      <p className="flex justify-center item-center">
+        If we can't alter the context length limit, our next best option is to
+        use tokenization to cram in as much useful information as we can. For
+        instance, if we have a super long sequence that stores little
+        information, like this Japanese and Mandarin example, of course, the LLM
+        will remember little, and the performance is just as disappointing. We
+        will use Byte Pairing Algorithm later to explain this idea in detailed
+        example.
+      </p>
+      <p>
+        Try inputting the same data into both GPT2 and GPT4. Which one has
+        longer tokens? Is OpenAI able to effectively reduce the token lengths
+        for the same information?
+      </p>
+      <p>
+        If you get the basics here, we can start learning how to translate texts
+        to byte sequences using ASCII and Unicode.
       </p>
     </div>
-    // </div>
   );
 };
 

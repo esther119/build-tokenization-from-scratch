@@ -20,3 +20,7 @@ code {
   justify-content: space-around;
   padding: 20px;
 }
+
+p {
+  @apply text-base sm:text-lg mb-4 max-w-xl mx-auto text-justify;
+}

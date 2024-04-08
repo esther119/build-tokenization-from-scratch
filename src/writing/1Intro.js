@@ -5,7 +5,7 @@ const Intro = () => {
         Build Tokenizer From Scratch - Part 1
       </h1>
       <div className="max-w-xl mx-auto">
-        <p className="text-lg mb-4 text-justify">
+        <p>
           Esther began learning how to build the GPT tokenizer with Andrej
           Karpathy. As she was learning, she realized, "OMG! The content is
           AMAZING! But why is it so... inhuman?" (Youtube content greater than
@@ -15,7 +15,7 @@ const Intro = () => {
           me teach you what is tokenization.
         </p>
         <p class="italic text-center text-gray-600 bg-gray-200 p-2 rounded-lg shadow-md">
-          For mobile human beings: Flip your screen horizontally to save my
+          For tiny phone human beings: Flip your screen horizontally to save my
           life.
         </p>
       </div>
