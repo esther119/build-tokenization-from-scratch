@@ -40,7 +40,7 @@ const ASCII = () => {
         97, 116].
       </p>
       <p>How to translate between ASCII and Unicode then?</p>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         <ul className="list-disc text-base sm:text-lg">
           <li className="text-left">
             ASCII: Used for English only. It ranges from 0 to 255.

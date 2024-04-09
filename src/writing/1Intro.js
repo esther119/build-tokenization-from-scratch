@@ -15,8 +15,8 @@ const Intro = () => {
           me teach you what is tokenization.
         </p>
         <p class="italic text-center text-gray-600 bg-gray-200 p-2 rounded-lg shadow-md">
-          For tiny phone human beings: Flip your screen horizontally to save my
-          life.
+          For tiny tiny phone human beings: Flip your screen horizontally to
+          save my life.
         </p>
       </div>
     </div>
