@@ -50,7 +50,7 @@ const StringModifierPlay = () => {
             value={replacementCharacters}
             onChange={handleInputChange}
             placeholder="case sensitive"
-            className="w-28 p-1 border rounded"
+            className="w-14 sm:w-28 p-1 border rounded"
           />
         </div>
         <div className="flex items-center">
@@ -61,7 +61,7 @@ const StringModifierPlay = () => {
             value={replacementCharacters2}
             onChange={handleInputChange2}
             placeholder="case sensitive"
-            className="w-28 p-1 border rounded"
+            className="w-14 sm:w-28 p-1 border rounded"
           />
         </div>
       </div>
