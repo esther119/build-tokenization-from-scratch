@@ -7,7 +7,7 @@ const TokenHowTo = () => {
         How to do tokenization?
       </h1>
       <div className="max-w-xl mx-auto">
-        <p className="text-lg mb-4 text-justify">
+        <p>
           The first question to ask is: How do we even convert English or non
           English words into numbers? To understand what is even a string in
           python, we need to understand the concept of unicode. If you put in

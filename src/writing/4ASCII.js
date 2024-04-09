@@ -11,7 +11,7 @@ const ASCII = () => {
         Simple explain ASCII, Unicode, and Bytes
       </h1>
 
-      <p className="text-lg mb-4 text-justify">
+      <p>
         Let's start with ASCII code to understand Unicode. ASCII code is for
         English characters, digits, punctuation marks, and control characters,
         totaling 256 characters (8 bits). On the other hand, Unicode covers
@@ -20,38 +20,38 @@ const ASCII = () => {
         "code points." There are several ways to encode a string to Unicode:
         UTF-8, UTF-16, and UTF-32. Most people use UTF-8.
       </p>
-      <p className="text-lg mb-4 text-justify">
+      <p>
         ASCII and Unicode can be represented in bytes. A byte is a unit of
         digital information that most commonly consists of eight bits. A single
         byte can represent values from 0 to 255.
       </p>
-      <p className="text-lg mb-4 text-justify">
+      <p>
         Let's consider the ASCII representation of "Cat". Each character is
         represented by a byte in memory. For simplicity, let's look at their
         ASCII values:
       </p>
-      <ul className="text-lg">
+      <ul className="text-base sm:text-lg">
         <li>C = 67</li>
         <li>a = 97</li>
         <li>t = 116</li>
       </ul>
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p className="mt-4 mb-4">
         So, "Cat" in bytes (in ASCII encoding) can be seen as a sequence: [67,
         97, 116].
       </p>
-      <p className="text-lg mt-4 mb-4 text-justify">
-        How to translate between ASCII and Unicode then?
-      </p>
-      <ul className="list-disc text-lg">
-        <li className="text-left">
-          ASCII: Used for English only. It ranges from 0 to 255.
-        </li>
-        <li className="text-left">
-          Unicode: Suitable for all languages. It's a base-
-          <span className="bg-blue-300 rounded-lg">16</span> system using
-          0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.
-        </li>
-      </ul>
+      <p>How to translate between ASCII and Unicode then?</p>
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ul className="list-disc text-base sm:text-lg">
+          <li className="text-left">
+            ASCII: Used for English only. It ranges from 0 to 255.
+          </li>
+          <li className="text-left">
+            Unicode: Suitable for all languages. It's a base-
+            <span className="bg-blue-300 rounded-lg">16</span> system using
+            0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.
+          </li>
+        </ul>
+      </div>
       <Subsection>
         <h2 className="text-lg font-semibold">What is a base-16 system?</h2>
         <p className="text-gray-700 text-justify mt-2">
@@ -92,14 +92,14 @@ const ASCII = () => {
           </p>
         </p>
       </Subsection>
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p>
         For instance, Unicode U+00
         <span className="bg-yellow-500 rounded-lg">4</span>
         <span className="bg-green-500 rounded-lg">1</span> = A. Why? Fill in the
         base for Unicode and you will see!
         <br></br>
         <Calculation></Calculation>
-        <div className="flex justify-center items-center mt-8 sebmb-4">
+        <div className="mt-8 sebmb-4">
           <p>The answer for ASCII(65) is in the table below:</p>
         </div>
         <img
@@ -108,12 +108,12 @@ const ASCII = () => {
           class="absolute-width-96 h-auto"
         />
       </p>
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p>
         Change the text to run with your own Python example. If you pay
         attention to English vs non English output and compare the difference
         between ASCII vs Unicode, it’s so interesting!
       </p>
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p>
         Play(a): How is non-English character encoded in Unicode look like?
         <br></br>
         Play(b): How does it look like in byte values (integer)? Hint: Create a{" "}
@@ -125,7 +125,7 @@ const ASCII = () => {
         <CodeRunner initialCode={nonEnglish} />{" "}
       </div>
       <div className="flex flex-col items-center justify-center">
-        <p className="text-lg mt-4 mb-4 text-justify">
+        <p>
           Play(c): How does Unicode and ASCII difference in byte conversion and
           decoding?
         </p>
@@ -133,15 +133,13 @@ const ASCII = () => {
           <CodeRunner initialCode={unicodeConversion} />{" "}
         </div>
       </div>
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p>
         Learning about ASCII, Unicode, and Bytes is essential because we need to
         convert our strings into sequences of bytes (numbers) that the computer
         can understand. This is a important step in building our tokenizers.
       </p>
-      <p className="text-lg mt-4 mb-4">
-        Let’s feed in our bytes sequences into LLM now?{" "}
-      </p>
-      <p className="text-lg mt-4 mb-4 text-justify">
+      <p>Let’s feed in our bytes sequences into LLM now? </p>
+      <p>
         No, that’s a bad idea. Our byte sequences is pretty long. It means that
         we will put little information into our LLM. Can we use some sort of
         compression method to make it better? Let’s play with Byte Pairing
