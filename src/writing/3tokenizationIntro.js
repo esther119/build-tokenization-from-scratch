@@ -27,9 +27,10 @@ const TokenizationIntro = () => {
         is tokenized to 1441.
       </p>
       <p className="mb-10 flex justify-center items-center">
-        Play with the tokenizer in this playground below!
+        Play with the tokenizer in this playground below! Try comparing upper vs
+        lower cases and different languages!
       </p>
-      <div className="mb-10 sm:-mb-5 flex justify-center items-center mt-4">
+      <div className="mb-10 sm:-mb-20 flex justify-center items-center mt-4">
         <ExternalWebsite></ExternalWebsite>
       </div>
       <p>
