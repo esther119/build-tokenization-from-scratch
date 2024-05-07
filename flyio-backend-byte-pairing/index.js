@@ -76,15 +76,22 @@ app.post("/submit_data", (req, res) => {
     console.log("No code provided.");
     return res.status(400).send("No code provided.");
   }
+  let functionName;
+  let userFunction;
+  const functionRegex =
+    /(^|\n)(\s*)def\s+(\w+)\s*\(([^)]*)\)\s*:\s*([\s\S]*?)(?=\n\2\S|$)/g;
+  let match;
+  while ((match = functionRegex.exec(code)) !== null) {
+    console.log("Function Name:", match[3]);
+    functionName = match[3];
 
-  const functionRegex = /def\s+(\w+)\s*\(/;
-  const match = functionRegex.exec(code);
-  const functionName = match ? match[1] : null;
+    // console.log("Entire Function:\n", match[0].trim());
+    userFunction = match[0].trim();
+  }
 
-  console.log("Function name:", functionName);
-
-  if (match) {
-    const updatedCodeBlock = code + `\n${functionName}([1, 2, 3])`;
+  if (functionName === "pair_frequency") {
+    const updatedCodeBlock =
+      userFunction + `\nprint(${functionName}([1, 2, 3]))`;
     console.log("Updated code block:", updatedCodeBlock);
 
     const pythonProcess = spawn("python3", ["-c", updatedCodeBlock]);
@@ -92,7 +99,8 @@ app.post("/submit_data", (req, res) => {
 
     pythonProcess.stdout.on("data", (data) => {
       if (!hasResponded) {
-        res.send(data.toString());
+        console.log("python data", data);
+        // TODO: compare data with my correct output: {1:{2,3}, 2:{1,3}}
         hasResponded = true;
       }
     });

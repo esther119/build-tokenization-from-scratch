@@ -1,20 +1,5 @@
 import CodeRunnerCheck from "../codeRunnerCheck";
-import { getPair, download } from "../data";
-
-// const testCases = [
-//   { input: [1, 2, 3], expectedOutput: { "('A', ' ')": 1, "(' ', 'P')": 1 } },
-
-// ];
-const testCases = [
-  {
-    input: [1, 2, 3],
-    expectedOutput: new Map([
-      [["A", " "], 1],
-      [[" ", "P"], 1],
-    ]),
-  },
-  // { input: [1, 2, 3], expectedOutput: [5] },
-];
+import { getPair } from "../data";
 
 const CodeChecker = () => {
   return (
@@ -24,10 +9,7 @@ const CodeChecker = () => {
       </h1>
       {/* <div className="flex justify-center items-center mt-4 mb-4"></div> */}
       <div className="flex justify-center items-center w-full sm:w-2/3 mx-auto">
-        <CodeRunnerCheck
-          initialCode={getPair}
-          testCases={testCases}
-        ></CodeRunnerCheck>
+        <CodeRunnerCheck initialCode={getPair}></CodeRunnerCheck>
       </div>
       <p>
         Esther began learning how to build the GPT tokenizer with Andrej

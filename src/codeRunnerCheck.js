@@ -3,31 +3,12 @@ import PythonEditor from "./pythonEditor";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// const tokens =
-//   "😄 The very name strikes fear and awe into the hearts of programmers worldwide. We all know we ought to “support Unicode” in our software (whatever that means—like using wchar_t for all the strings, right?). But Unicode can be abstruse, and diving into the thousand-page Unicode Standard plus its dozens of supplementary annexes, reports, and notes can be more than a little intimidating. I don’t blame programmers for still finding the whole thing mysterious, even 30 years after Unicode’s inception.";
-// function arraysEqual(a, b) {
-//   if (a === b) return true;
-//   if (a == null || b == null) return false;
-//   if (a.length !== b.length) return false;
-
-//   for (let i = 0; i < a.length; ++i) {
-//     if (Array.isArray(a[i]) && Array.isArray(b[i])) {
-//       if (!arraysEqual(a[i], b[i])) return false;
-//     } else if (a[i] !== b[i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
-
-export default function CodeRunnerCheck({ initialCode, testCases }) {
+export default function CodeRunnerCheck({ initialCode }) {
   const [code, setCode] = useState(initialCode || 'print("Hello, World!")');
   const [output, setOutput] = useState("");
-  const [success, setSuccess] = useState("");
-  const [testResults, setTestResults] = useState([]);
   // const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
-  const backendUrl = "http://127.0.0.1:4000";
+  const backendUrl = "http://127.0.0.1:5000";
   const runPythonCode = () => {
     fetch(`${backendUrl}/run_code`, {
       method: "POST",
@@ -51,26 +32,19 @@ export default function CodeRunnerCheck({ initialCode, testCases }) {
     // let allResults = [];
     let isSuccess = "";
     try {
-      const response = await fetch(`${backendUrl}/submit_data`, {
+      const response = await fetch(`${backendUrl}/run_code_check`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ code }), // Sending code with input
       });
-      const data = await response.text();
+      const data = await response.json();
       console.log("data", typeof data, data);
 
       const output = data.result;
-      // console.log("data type", typeof data, data);
-      // const actualOutput = "hi";
-      // console.log("user output type", typeof actualOutput, actualOutput);
-      // console.log("expected output", testCase.expectedOutput);
       isSuccess = data.success;
       console.log("isSuccess", isSuccess);
-
-      // console.log("data, expected output", data, testCase.expectedOutput);
-      // allResults.push(isSuccess);
       setOutput(
         (prevOutput) =>
           prevOutput + `Your output: ${output} ${isSuccess ? "Pass" : "Fail"}\n`
@@ -81,9 +55,6 @@ export default function CodeRunnerCheck({ initialCode, testCases }) {
       setOutput((prevOutput) => prevOutput + `: Error\n`);
     }
 
-    // setTestResults(allResults);
-    // const allTestsPassed = allResults.every((result) => result === true);
-    // console.log("allTestsPassed", allTestsPassed, "allResults", allResults);
     if (isSuccess) {
       toast.success("All tests passed! You are a smart 🍄", {
         position: "top-center",
