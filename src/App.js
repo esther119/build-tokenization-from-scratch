@@ -8,17 +8,21 @@ import ASCII from "./writing/4ASCII";
 import TokenHowTo from "./writing/2tokenHowTo";
 import TakeAway from "./writing/6Takeaway";
 import References from "./writing/7resources";
+import CodeChecker from "./testCode/8Code";
+import TextInput from "./testCode/9TextBox";
+import DisplayComment from "./testCode/displayComment";
 
 function App() {
   return (
     <div className="App bg-gray-100 flex flex-col items-center justify-center overflow-x-hidden mx-4 lg:mx-2 xl:mx-4 2xl:mx-6">
-      <Intro></Intro>
-      <TokenHowTo></TokenHowTo>
+      {/* <Intro></Intro> */}
+      {/* <TokenHowTo></TokenHowTo>
       <TokenizationIntro />
       <ASCII></ASCII>
       <BytePairingAlgorithm />
       <TakeAway></TakeAway>
-      <References></References>
+      <References></References> */}
+      <CodeChecker></CodeChecker>
     </div>
   );
 }

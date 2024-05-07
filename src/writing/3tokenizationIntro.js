@@ -1,3 +1,5 @@
+import ExternalWebsite from "../externalweb";
+
 const TokenizationIntro = () => {
   return (
     <div>
@@ -24,25 +26,31 @@ const TokenizationIntro = () => {
         </code>{" "}
         is tokenized to 1441.
       </p>
-      <div className="flex justify-center items-center mt-4 mb-4">
-        <img src="/1.png" alt="tokenizer1" class="absolute-width-96 h-auto" />
+      <p className="mb-10 flex justify-center items-center">
+        Play with the tokenizer in this playground below! Try comparing upper vs
+        lower cases and different languages!
+      </p>
+      <div className="mb-10 sm:-mb-20 flex justify-center items-center mt-4">
+        <ExternalWebsite></ExternalWebsite>
       </div>
       <p>
-        If you experiment, you'll notice that the identical word "egg" and "Egg"
-        are separated differently when one begins with a lowercase letter and
-        the other with an uppercase letter. Similarly, in math addition, you'll
-        observe that 5761 is not treated as a single token but is split into 576
-        and 1.
+        If you experiment with the playground, you'll notice that the identical
+        word "egg" and "Egg" are separated differently when one begins with a
+        lowercase letter and the other with an uppercase letter. Similarly, in
+        math addition, you'll observe that 5761 is not treated as a single token
+        but is split into 576 and 1.
       </p>
-      <div className="flex justify-center items-center mt-4 mb-4">
-        <img src="/2.png" alt="tokenizer2" class="absolute-width-96 h-auto" />
-      </div>
 
       <p>
         What happens if you input code into the tokenizer? Does a single space
         indentation represent one token or does it represent multiple spaces as
         a single token? How does the tokenization of space differ in GPT-2
         compared to GPT-4? What about the tokenization of different languages?
+      </p>
+      <div className="flex justify-center items-center mt-4 mb-4">
+        <img src="/2.png" alt="tokenizer2" class="absolute-width-96 h-auto" />
+      </div>
+      <p>
         If I input Mandarin or Japanese, wait a minute…every single character is
         a token. This implies that using Mandarin or Japanese likely requires
         more tokens to express the same meaning as in English. This could be one

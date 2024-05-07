@@ -28,9 +28,9 @@ function References() {
           <span>Tiktokenizer: </span>
           <a
             className="text-blue-500 hover:underline"
-            href="https://tiktokenizer.vercel.app/"
+            href="https://github.com/dqbd/tiktokenizer"
           >
-            https://tiktokenizer.vercel.app/
+            https://github.com/dqbd/tiktokenizer
           </a>
         </li>
       </ul>
