@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 
 app.post("/run_code", (req, res) => {
   const { code } = req.body;
+
   const pythonProcess = spawn("python3", ["-c", code]);
 
   pythonProcess.stdout.on("data", (data) => {
@@ -37,14 +38,79 @@ app.post("/run_code", (req, res) => {
 });
 
 // POST request handler
-app.post("/submit-data", (req, res) => {
-  // Make sure to check if the body is defined
-  if (!req.body) return res.sendStatus(400);
+// app.post("/submit_data", (req, res) => {
+//   const { code } = req.body;
+//   // Regular expression to match function definitions
+//   const functionRegex = /def\s+(\w+)\s*\(/;
+//   const match = functionRegex.exec(code);
+//   const functionName = match ? match[1] : null;
+//   let updatedCodeBlock;
 
-  const { name, age } = req.body;
-  res.status(200).json({ message: `Hello ${name}, you are ${age} years old.` });
-});
+//   console.log("Function name:", functionName);
+
+//   if (match) {
+//     const updatedCodeBlock = code + `\n${functionName}(1, 2, 3)`;
+//     console.log("Updated code block:", updatedCodeBlock);
+//   } else {
+//     console.log("Function not found.");
+//   }
+
+//   const pythonProcess = spawn("python3", ["-c", updatedCodeBlock]);
+
+//   pythonProcess.stdout.on("data", (data) => {
+//     res.send(data.toString());
+//   });
+
+//   pythonProcess.stderr.on("data", (data) => {
+//     res.status(400).send(data.toString());
+//   });
+// });
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
+});
+
+app.post("/submit_data", (req, res) => {
+  const { code } = req.body;
+  if (!code) {
+    console.log("No code provided.");
+    return res.status(400).send("No code provided.");
+  }
+
+  const functionRegex = /def\s+(\w+)\s*\(/;
+  const match = functionRegex.exec(code);
+  const functionName = match ? match[1] : null;
+
+  console.log("Function name:", functionName);
+
+  if (match) {
+    const updatedCodeBlock = code + `\n${functionName}([1, 2, 3])`;
+    console.log("Updated code block:", updatedCodeBlock);
+
+    const pythonProcess = spawn("python3", ["-c", updatedCodeBlock]);
+    let hasResponded = false;
+
+    pythonProcess.stdout.on("data", (data) => {
+      if (!hasResponded) {
+        res.send(data.toString());
+        hasResponded = true;
+      }
+    });
+
+    pythonProcess.stderr.on("data", (data) => {
+      if (!hasResponded) {
+        res.status(400).send(data.toString());
+        hasResponded = true;
+      }
+    });
+
+    pythonProcess.on("close", (code) => {
+      if (!hasResponded) {
+        res.status(500).send(`Python script closed with code ${code}`);
+      }
+    });
+  } else {
+    console.log("Function not found in the provided code.");
+    return res.status(400).send("Function not found in the provided code.");
+  }
 });

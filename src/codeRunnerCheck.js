@@ -27,7 +27,7 @@ export default function CodeRunnerCheck({ initialCode, testCases }) {
   const [testResults, setTestResults] = useState([]);
   // const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
-  const backendUrl = "http://127.0.0.1:5000";
+  const backendUrl = "http://127.0.0.1:4000";
   const runPythonCode = () => {
     fetch(`${backendUrl}/run_code`, {
       method: "POST",
@@ -47,18 +47,19 @@ export default function CodeRunnerCheck({ initialCode, testCases }) {
 
   const runPythonTestCode = async () => {
     setOutput("");
+
     // let allResults = [];
     let isSuccess = "";
     try {
-      const response = await fetch(`${backendUrl}/run_code_check`, {
-        // Notice the endpoint might be different
+      const response = await fetch(`${backendUrl}/submit_data`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ code }), // Sending code with input
       });
-      const data = await response.json();
+      const data = await response.text();
+      console.log("data", typeof data, data);
 
       const output = data.result;
       // console.log("data type", typeof data, data);

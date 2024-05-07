@@ -9,6 +9,8 @@ import TokenHowTo from "./writing/2tokenHowTo";
 import TakeAway from "./writing/6Takeaway";
 import References from "./writing/7resources";
 import CodeChecker from "./testCode/8Code";
+import TextInput from "./testCode/9TextBox";
+import DisplayComment from "./testCode/displayComment";
 
 function App() {
   return (

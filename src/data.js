@@ -43,6 +43,7 @@ def pair_frequency(ids):
   >>> pair_frequency(['a', 'b', 'c', 'a', 'b'])
   {('a', 'b'): 2, ('b', 'c'): 1, ('c', 'a'): 1}
   """
+  #TODO
   counts = {}
   for pair in zip(ids, ids[1:]): # Pythonic way to iterate consecutive elements
     counts[pair] = counts.get(pair, 0) + 1
