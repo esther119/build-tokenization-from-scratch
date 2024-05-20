@@ -1,6 +1,6 @@
 import React from "react";
-import StringModifier from "../stringModifier"; // Adjust the path as necessary
-import StringModifierPlay from "../stringModifierPlay"; // Adjust the path as necessary
+import StringModifier from "../../stringModifier"; // Adjust the path as necessary
+import StringModifierPlay from "../../stringModifierPlay"; // Adjust the path as necessary
 
 const BytePairingAlgorithm = () => {
   return (

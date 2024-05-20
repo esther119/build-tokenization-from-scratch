@@ -1,4 +1,4 @@
-import ExternalWebsite from "../externalweb";
+import ExternalWebsite from "../../externalweb";
 
 const TokenizationIntro = () => {
   return (

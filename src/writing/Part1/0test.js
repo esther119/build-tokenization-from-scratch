@@ -1,4 +1,4 @@
-import CodeRunner from "../codeRunner";
+import CodeRunner from "../../codeRunner";
 const Test = () => {
   return (
     <div>

@@ -1,7 +1,7 @@
 // import VimeoVideo from "../videoDisplay";
-import CodeRunner from "../codeRunner";
-import { nonEnglish, unicodeConversion } from "../data";
-import Subsection from "../subSection";
+import CodeRunner from "../../codeRunner";
+import { nonEnglish, unicodeConversion } from "../../data";
+import Subsection from "../../subSection";
 import Calculation from "./4.1BaseCalculation";
 
 const ASCII = () => {
